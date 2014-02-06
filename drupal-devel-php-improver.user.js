@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name			Drupal devel/php Improver
-// @author			John Sanderson <@9point6>
-// @description		Adds CodeMirror to the devel/php page
-// @namespace		http://www.9point6.com/userscript/drupal-devel-php-improver
-// @include			*/devel/php
-// @version			1.0
+// @name          Drupal devel/php Improver
+// @author        John Sanderson <@9point6>
+// @description   Adds CodeMirror to the devel/php page
+// @namespace     http://www.9point6.com/userscript/drupal-devel-php-improver
+// @include       */devel/php
+// @version       1.0
 // ==/UserScript==
 
 (function ( ) {
