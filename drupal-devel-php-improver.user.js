@@ -10,11 +10,6 @@
 (function ( ) {
 	var base, fn;
 
-	// Kill it off if it's not drupal
-	if( typeof window.Drupal === 'undefined' ) {
-		return;
-	}
-
 	// Choose the version of codemirror to load
 	base = '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.21.0/';
 
@@ -99,7 +94,14 @@
 				e = document.createElement( 'style' );
 				e.appendChild( document.createTextNode( '' ) );
 				document.head.appendChild( e );
-				e.sheet.addRule( '.CodeMirror', 'height: 600px; font-size: 1.4em; font-family: "Inconsolata", "Source Code Pro", "Consolas", monospace;' );
+				e.sheet.addRule( '.CodeMirror', [
+					'height: 600px;',
+					'font-size: 1.4em;',
+					'font-family: "Inconsolata", "Source Code Pro", "Consolas", monospace;',
+				].join( ' ' ) );
+				e.sheet.addRule( '.CodeMirror-gutters', [
+					'background: #36372F !important;'
+				].join( ' ' ) );
 
 				// Create CodeMirror on the textarea
 				CodeMirror.fromTextArea( document.getElementById( 'edit-code' ), {
