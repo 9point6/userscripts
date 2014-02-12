@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Drupal devel/php Improver",
+	"version": "1.0.0",
+	"description": "Adds CodeMirror to the devel/php page on a drupal site",
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"content_scripts": [ {
+		"exclude_globs": [ ],
+		"include_globs": [ "*" ],
+		"js": [ "drupal-devel-php-improver.user.js" ],
+		"matches": [
+			"http://*/devel/php",
+			"https://*/devel/php"
+		],
+		"run_at": "document_end"
+	} ],
+	"converted_from_user_script": true
+}
