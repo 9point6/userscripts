@@ -4,7 +4,7 @@
 // @description   Adds CodeMirror to the devel/php page
 // @namespace     http://www.9point6.com/userscript/drupal-devel-php-improver
 // @include       */devel/php
-// @version       1.0
+// @version       1.0.1
 // ==/UserScript==
 
 (function ( ) {
@@ -112,7 +112,12 @@
 					'indentUnit': 4,
 					'indentWithTabs': true,
 					'theme': 'monokai',
-					'autofocus': true
+					'autofocus': true,
+					'extraKeys': {
+						'Ctrl-Enter': function ( cm ) {
+							jQuery( 'form[action="/devel/php"]' ).submit( );
+						}
+					}
 				} );
 			}
 		}
