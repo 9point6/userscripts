@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Drupal PHP Input Improver",
-	"version": "1.1.0",
-	"description": "Adds CodeMirror to certain fields on a drupal site",
+	"version": "1.2.0",
+	"description": "Adds CodeMirror to certain fields on a Drupal site",
 	"icons": {
 		"16": "icons/16.png",
 		"48": "icons/48.png",
@@ -15,8 +15,10 @@
 		"matches": [
 			"http://*/devel/php",
 			"https://*/devel/php",
-			"http://*/admin/structure/ds/fields/manage_custom/*",
-			"https://*/admin/structure/ds/fields/manage_custom/*"
+			"http://*/admin/*",
+			"https://*/admin/*",
+			"http://*/node/*",
+			"https://*/node/*"
 		],
 		"run_at": "document_end"
 	} ],
