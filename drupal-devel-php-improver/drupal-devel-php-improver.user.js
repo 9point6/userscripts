@@ -6,7 +6,7 @@
 // @include       */devel/php
 // @include       */admin/*"
 // @include       */node/*"
-// @version       1.2.0
+// @version       1.2.1
 // ==/UserScript==
 
 (function ( ) {
@@ -112,7 +112,7 @@
 					selector = jQuery('.text-format-wrapper select, .form-textarea-wrapper select');
 					selection = selector.val();
 
-					if ((selection === 'php' || selection === 'ds_code') && window.codemirror === null) {
+					if ((selection === 'php' || selection === 'php_code' || selection === 'ds_code') && window.codemirror === null) {
 						createCodeMirror(jQuery('.text-format-wrapper textarea:not(.text-summary)')[0], 300);
 					} else {
 						try {
